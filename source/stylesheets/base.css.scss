@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700');
+@import "templates/colors.css.scss";
+@import "templates/spacing.css.scss";
+
+html {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #cccccc;
+}
+body {
+  background-color: $black;
+  color: #fff;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  grid-column: span 12;
+}
+
+// Grid + Responsive
+
+.header, .footer {
+  display: grid;
+  background: $gray;
+  padding: 96px 0 96px 0;
+  text-align: center;
+  grid-template-columns: repeat(12, 1fr);
+  * {
+    grid-column: 3 / 11;
+    justify-self: center;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.disclaimer {
+  grid-column: 3 / 11;
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: $text-gray;
+    text-align: center;
+    font-weight: 200;
+  }
+}
+
+.text-and-screen {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  .text-area {
+    grid-column: 2 / 7;
+    align-self: center;
+  }
+  .screen-area {
+    grid-column: 7 / 13;
+    justify-self: right;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.icon-preview--text, .twitter-testimonials--text{
+  grid-column: 4 / 10;
+  margin-top: 128px;
+  text-align: center;
+  input {
+    width: 50%;
+  }
+}
+
+.icon-preview {
+  grid-column: 2 / 12;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-gap: 1em;
+  .icon-preview--item {
+    padding: 24px 0;
+    border: 2px solid $pink;
+    .icon--name {
+      color: white;
+    }
+  }
+}
+
+.icon-preview {
+  grid-column: 2 / 12;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-gap: 1em;
+}
+
+.no-icons-found {
+  grid-column: 4 / 10;
+  margin-top: 16px;
+  text-align: center;
+  display: none;
+}
+
+.twitter-testimonials {
+  grid-column: 2 /12;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 16px;
+}
+
+.twitter-testimonial {
+  margin-bottom: -24px;
+  .EmbeddedTweet {
+    max-width: 128px !important;
+    margin: 0 !important;
+  }
+}
+
+// Search Field
+
+input[type="text"]{
+  font-family: inherit;
+  background: transparent url('/images/icon-search.svg') center left no-repeat;
+  border: none;
+  border-bottom: 2px solid rgba($pink, .5);
+  color: white;
+  line-height: 1.5em;
+  font-size: 1.125em;
+  padding: .25em 2em;
+  width: 300px; 
+  font-weight: 200;
+  outline: none;
+  transition: .4s;
+  &::placeholder {
+    color: white;
+  }
+  &:focus {
+    border-bottom: 2px solid rgba($pink, 1);
+  }
+}
+
+// Buttons
+.cta {
+  font-size: .7;
+  padding: 1em 2em;
+  border: 2px solid $pink;
+  border-radius: 2em;
+  color: white;
+  text-decoration: none; 
+  text-transform: uppercase;
+  transition: .3s;
+  &:hover {
+    color: $pink;
+  }
+  &:active{
+    transform: scale(.9);
+  }
+  &.size--sm {
+    font-size: .5;
+    padding: .5em 1.5em;
+  }
+}
+// Type 
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+h2 {
+  font-weight: 500;
+  font-size: 2.25em;
+}
+h3 {
+  font-weight: 500;
+  font-size: 2.25em;
+}
+h4 {
+  font-size: 1.125em;
+  font-weight: 400;
+  span.strong {
+    font-weight: 600;
+  }
+}
+
+h5 {
+  color: $pink;
+  font-size: 0,875em;
+}
+
+span.studio-type::after {
+  content: ".";
+  color: $pink;
+  font-family: Arial;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: .3s;
+  &:hover {
+    text-decoration: none;
+    color: $pink;
+  }
+}
+
+p {
+  font-size: 1em;
+  color: $text-gray;
+  line-height: 1.5em;
+}
+
+.footer--text {
+  color: white;
+  font-size: .875em;
+}
+a.small {
+  font-size: 0.625em;
+  color: $text-gray;
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .content {
+    overflow-x: hidden;
+  }
+  .header, .footer {
+    * {
+      grid-column: 2 / 12;
+    }
+    h1 {
+      font-size: 2em;
+    }
+  }
+  .disclaimer {
+    grid-column: 2 / 12;
+    p {
+      text-align: left;
+    }
+  }
+
+  .text-and-screen {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .text-area {
+      grid-column: 2 / 11;
+      align-self: center;
+
+      order: 2;
+    }
+    .screen-area {
+      grid-column: 2 / 13;
+      order: 1;
+      margin-bottom: 32px;
+    }
+  }
+  .icon-preview--text, .twitter-testimonials--text{
+    grid-column: 2 / 12;
+    input[type="text"] {
+      width: 240px;
+    }
+  }
+  .no-icons-found {
+    grid-column: 2 / 12;
+  }
+
+}
+@media only screen and (min-width : 1681px) {
+  body {
+    grid-column: 3 / 11;
+    box-shadow: 0 0 4px rgba($black, 1);
+  }
+
+}
