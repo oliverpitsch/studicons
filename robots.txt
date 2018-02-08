@@ -1,0 +1,4 @@
+# robots.txt zu pitsch.me/studicons
+
+User-agent: *
+Disallow: /
