@@ -131,7 +131,7 @@ body {
   grid-column: 2 /12;
   display: grid;
   grid-gap: 2em;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   text-align: center; }
 
 .no-icons-found {
@@ -254,6 +254,13 @@ a.small {
 p.icon--name {
   font-size: .875em; }
 
+@media only screen and (max-width: 1024px) {
+  .feature-boxes {
+    grid-column: 2 /12;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    text-align: center; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .content {
@@ -293,7 +300,14 @@ p.icon--name {
       width: 240px; }
 
   .no-icons-found {
-    grid-column: 2 / 12; } }
+    grid-column: 2 / 12; }
+
+  .feature-boxes {
+    grid-column: 2 /12;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr;
+    text-align: center; } }
 @media only screen and (min-width: 1681px) {
   body {
     grid-column: 3 / 11;
