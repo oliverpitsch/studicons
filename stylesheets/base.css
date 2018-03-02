@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700");
 .mb-8 {
   margin-bottom: 8px; }
 
@@ -59,16 +59,16 @@ html {
   background-color: #cccccc; }
 
 body {
-  background-color: #121820;
+  background-color: #081E23;
   color: #fff;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", Arial, sans-serif;
   padding: 0;
   margin: 0;
   grid-column: span 12; }
 
 .header, .footer {
   display: grid;
-  background: #1C2126;
+  background: #0A292F;
   padding: 96px 0 96px 0;
   text-align: center;
   grid-template-columns: repeat(12, 1fr); }
@@ -87,7 +87,7 @@ body {
     line-height: 1.5em;
     color: #A2A2A2;
     text-align: center;
-    font-weight: 200; }
+    font-weight: 300; }
 
 .text-and-screen {
   grid-column: span 12;
@@ -123,7 +123,7 @@ body {
   grid-gap: 1em; }
   .icon-preview .icon-preview--item {
     padding: 24px;
-    border: 2px solid #F80051; }
+    border: 2px solid #2FCDE8; }
     .icon-preview .icon-preview--item .icon--name {
       color: white; }
 
@@ -156,7 +156,7 @@ input[type="text"] {
   font-family: inherit;
   background: transparent url("../images/icon-search.svg") center left no-repeat;
   border: none;
-  border-bottom: 2px solid rgba(248, 0, 81, 0.5);
+  border-bottom: 2px solid rgba(47, 205, 232, 0.5);
   color: white;
   line-height: 1.5em;
   font-size: 1.125em;
@@ -175,20 +175,20 @@ input[type="text"] {
   input[type="text"]::placeholder {
     color: white; }
   input[type="text"]:focus {
-    border-bottom: 2px solid #f80051; }
+    border-bottom: 2px solid #2fcde8; }
 
 .cta {
   font-size: .7;
   padding: 1em 2em;
-  border: 2px solid #F80051;
-  border-radius: 2em;
+  border: 2px solid #2FCDE8;
+  border-radius: .5em;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: .3s;
   transition: .3s; }
   .cta:hover {
-    color: #F80051; }
+    color: #2FCDE8; }
   .cta:active {
     -webkit-transform: scale(0.9);
             transform: scale(0.9); }
@@ -220,14 +220,8 @@ h4 {
   font-weight: 600; }
 
 h5 {
-  color: #F80051;
+  color: #2FCDE8;
   font-size: 0,875em; }
-
-span.studio-type::after {
-  content: ".";
-  color: #F80051;
-  font-family: Arial;
-  font-weight: 600; }
 
 a {
   text-decoration: none;
@@ -236,7 +230,7 @@ a {
   transition: .3s; }
   a:hover {
     text-decoration: none;
-    color: #F80051; }
+    color: #2FCDE8; }
 
 p {
   font-size: 1em;
@@ -311,5 +305,5 @@ p.icon--name {
 @media only screen and (min-width: 1681px) {
   body {
     grid-column: 3 / 11;
-    -webkit-box-shadow: 0 0 4px #121820;
-            box-shadow: 0 0 4px #121820; } }
+    -webkit-box-shadow: 0 0 4px #081e23;
+            box-shadow: 0 0 4px #081e23; } }
