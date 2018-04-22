@@ -248,6 +248,29 @@ a.small {
 p.icon--name {
   font-size: .875em; }
 
+input[type="email"] {
+  padding: 12px;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  font-size: 1em; }
+
+input[type="submit"], input[type="button"] {
+  font-size: .7;
+  padding: 1em 2em;
+  border: 2px solid #2FCDE8;
+  border-radius: .5em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  -webkit-transition: .3s;
+  transition: .3s; }
+  input[type="submit"]:hover, input[type="button"]:hover {
+    color: #2FCDE8; }
+  input[type="submit"]:active, input[type="button"]:active {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
 @media only screen and (max-width: 1024px) {
   .feature-boxes {
     grid-column: 2 /12;
